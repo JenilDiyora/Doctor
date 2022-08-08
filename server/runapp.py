@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from .view.doctor import router as DoctorRouter
 import server.model.doctor 
-from server.database import Base,engine
+from server.database import engine
 from fastapi.staticfiles import StaticFiles
 server.model.doctor.Base.metadata.create_all(bind=engine)
 
